@@ -8,6 +8,7 @@
                  [http-kit "2.2.0"]
                  [clj-time "0.14.0"]
                  [compojure "1.6.0"]]
+  :plugins [[lein-ring "0.8.8"]]
   :main clojure-simple-http.core
   :ring {:handler clojure-simple-http.core/app
          :port 8080}
