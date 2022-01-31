@@ -1,15 +1,8 @@
-(defproject clojure-simple-http "0.1.0-SNAPSHOT"
-  :author "Divyum Rastogi"
-  :description "A simple HTTP server"
-  :min-lein-version "2.7.1"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [http-kit "2.2.0"]
-                 [clj-time "0.14.0"]
-                 [compojure "1.6.0"]]
-  :plugins [[lein-ring "0.8.8"]]
-  :main clojure-simple-http.core
-  :ring {:handler clojure-simple-http.core/app
-         :port 8080}
-  :uberjar-name "server.jar")
+(defproject imiller31-ring "0.1.0-SNAPSHOT"
+  :dependencies [[org.clojure/clojure "1.10.0"]
+                 [ring/ring-core "1.7.1"]
+                 [ring/ring-jetty-adapter "1.7.1"]
+                 [ring/ring-devel "1.7.1"]]
+  :plugins [[lein-ring "0.12.5"]]
+  :ring {:handler ring.core/simple-handler}
+  :repl-options {:init-ns ring.core})
